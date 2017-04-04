@@ -1,4 +1,4 @@
-# INSA-GL-Analyse-médicale
+# Projet Génie Logiciel - Analyse médicale
 
 ## Presentation
   Ceci est un projet fait en Génie Logiciel 3IF à l'INSA de Lyon. Le sujet est disponible [ici](./doc/sujet.pdf)

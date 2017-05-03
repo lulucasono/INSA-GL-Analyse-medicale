@@ -1,13 +1,13 @@
-// stdafx.h : fichier Include pour les fichiers Include système standard,
-// ou les fichiers Include spécifiques aux projets qui sont utilisés fréquemment,
-// et sont rarement modifiés
+ï»¿// stdafx.h? fichier Include pour les fichiers Include systé‘e standard,
+// ou les fichiers Include spé–ifiques aux projets qui sont utilisé–Ÿ fré–uemment,
+// et sont rarement modifié–Ÿ
 //
 
 #pragma once
 
 #include "targetver.h"
 
-// En-têtes pour CppUnitTest
+// En-té˜¾es pour CppUnitTest
 #include "CppUnitTest.h"
 
-// TODO: faites référence ici aux en-têtes supplémentaires nécessaires au programme
+// TODO: faites ré–’é–ence ici aux en-té˜¾es supplé–™entaires né–essaires au programme

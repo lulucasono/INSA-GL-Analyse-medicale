@@ -45,6 +45,12 @@
     <ClInclude Include="diseaseDAO.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="sqlite3.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="sqlite3ext.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="server.cpp">
@@ -71,6 +77,9 @@
     <ClCompile Include="diseaseDAO.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="sqlite3.c">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="server.rc">
@@ -81,10 +90,24 @@
     <None Include="res\server.rc2">
       <Filter>Fichiers de ressources</Filter>
     </None>
+    <None Include="sqlite3.def">
+      <Filter>Fichiers sources</Filter>
+    </None>
+    <None Include="sqlite3.dll">
+      <Filter>Fichiers sources</Filter>
+    </None>
+    <None Include="sqlite3.exp">
+      <Filter>Fichiers sources</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\server.ico">
       <Filter>Fichiers de ressources</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="sqlite3.lib">
+      <Filter>Fichiers sources</Filter>
+    </Library>
   </ItemGroup>
 </Project>

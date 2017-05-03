@@ -1,4 +1,4 @@
-// ClientSocket.cpp : fichier d'implémentation
+ï»¿// ClientSocket.cpp? fichier d'implé–™entation
 //
 
 #include "stdafx.h"

@@ -187,6 +187,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="ClientSocket.h" />
+    <ClInclude Include="Disease.h" />
     <ClInclude Include="Genome.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="server.h" />
@@ -196,6 +197,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Disease.cpp" />
     <ClCompile Include="ClientSocket.cpp" />
     <ClCompile Include="Genome.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)</AdditionalIncludeDirectories>

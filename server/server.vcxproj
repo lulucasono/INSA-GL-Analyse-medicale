@@ -186,7 +186,7 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="models\Genome.h" />
+    <ClInclude Include="Genome.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="server.h" />
     <ClInclude Include="serverDlg.h" />
@@ -194,7 +194,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="models\Genome.cpp">
+    <ClCompile Include="Genome.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="server.cpp" />

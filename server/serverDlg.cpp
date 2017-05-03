@@ -6,6 +6,7 @@
 #include "server.h"
 #include "serverDlg.h"
 #include "afxdialogex.h"
+#include "ServerListener.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -51,6 +52,7 @@ END_MESSAGE_MAP()
 
 CserverDlg::CserverDlg(CWnd* pParent /*=NULL*/)
 	: CDialogEx(IDD_SERVER_DIALOG, pParent)
+	, m_port(0)
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
@@ -58,12 +60,15 @@ CserverDlg::CserverDlg(CWnd* pParent /*=NULL*/)
 void CserverDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
+	DDX_Text(pDX, IDC_PORT, m_port);
+	DDV_MinMaxInt(pDX, m_port, 0, 99999);
 }
 
 BEGIN_MESSAGE_MAP(CserverDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_BN_CLICKED(IDC_BUTTON1, &CserverDlg::OnBnClickedButton1)
 END_MESSAGE_MAP()
 
 
@@ -99,6 +104,9 @@ BOOL CserverDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// Définir une petite icône
 
 	// TODO: ajoutez ici une initialisation supplémentaire
+
+	m_port = 8080;
+	UpdateData(true);
 
 	return TRUE;  // retourne TRUE, sauf si vous avez défini le focus sur un contrôle
 }
@@ -152,3 +160,13 @@ HCURSOR CserverDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+
+void CserverDlg::OnBnClickedButton1()
+{
+	UpdateData(true);
+
+	ServerListener* pServer = new ServerListener();
+	pServer->Create(m_port);
+	pServer->Listen();
+}

@@ -51,7 +51,10 @@
     <ClInclude Include="sqlite3ext.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
-    <ClInclude Include="DiscoverService.h">
+    <ClInclude Include="AnalysisException.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="DiseaseNotFoundException.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
@@ -83,7 +86,10 @@
     <ClCompile Include="sqlite3.c">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="DiscoverService.cpp">
+    <ClCompile Include="AnalysisException.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="DiseaseNotFoundException.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>

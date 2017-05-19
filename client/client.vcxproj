@@ -195,6 +195,7 @@
     <ClInclude Include="ReadException.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Server.h" />
+    <ClInclude Include="ServerDAO.h" />
     <ClInclude Include="ServerService.h" />
     <ClInclude Include="ServiceException.h" />
     <ClInclude Include="stdafx.h" />
@@ -207,6 +208,7 @@
     <ClCompile Include="MulticastSocket.cpp" />
     <ClCompile Include="ReadException.cpp" />
     <ClCompile Include="Server.cpp" />
+    <ClCompile Include="ServerDAO.cpp" />
     <ClCompile Include="ServerService.cpp" />
     <ClCompile Include="ServiceException.cpp" />
     <ClCompile Include="stdafx.cpp">

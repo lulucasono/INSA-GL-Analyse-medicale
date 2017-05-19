@@ -20,6 +20,8 @@ const list<string>& Disease::riskfulGenes() const
 
 
 
+
+
 Disease::~Disease()
 {
 }

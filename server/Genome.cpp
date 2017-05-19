@@ -11,3 +11,8 @@ Genome::Genome()
 Genome::~Genome()
 {
 }
+
+const list<string>& Genome::getGene() const
+{
+	return geneticCode;
+}

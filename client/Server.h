@@ -18,6 +18,7 @@ public:
 
 	const std::string& name() const;
 
+
 	//////////// DESTRUCTOR /////////////////
 
 	~Server();

@@ -20,12 +20,14 @@ void ServerService::UpdateFromMulticast()
 	// + Exception eventuelle
 	for(std::map<std::string, Server>::iterator it = foundServers.begin(); it!= foundServers.end(); it++)
 	{
-		if(fileServers.find(it->first)==fileServers.end())
+		// modifié
+		/*if(fileServers.find(it->first)==fileServers.end())
 		{
 			// Insertion de *it dans la BD + Exception eventuelle (impossible d'insérer machin)
-			Server s(it->first, it->second.name());
+			string *addressNewServer = new string(it->first);
+			Server s(addressNewServer, it->second.name());
 			AddServer(s);
-		}
+		}*/
 	}
 	
 }

@@ -186,9 +186,11 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AnalysisException.h" />
     <ClInclude Include="ClientSocket.h" />
     <ClInclude Include="Disease.h" />
     <ClInclude Include="diseaseDAO.h" />
+    <ClInclude Include="DiseaseNotFoundException.h" />
     <ClInclude Include="Genome.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="server.h" />
@@ -200,9 +202,11 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AnalysisException.cpp" />
     <ClCompile Include="Disease.cpp" />
     <ClCompile Include="ClientSocket.cpp" />
     <ClCompile Include="diseaseDAO.cpp" />
+    <ClCompile Include="DiseaseNotFoundException.cpp" />
     <ClCompile Include="Genome.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)</AdditionalIncludeDirectories>
     </ClCompile>

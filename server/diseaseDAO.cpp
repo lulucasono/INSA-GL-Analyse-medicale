@@ -6,11 +6,12 @@ diseaseDAO::diseaseDAO()
 {
 }
 
-diseaseDAO::diseaseDAO(string dbPath)
+diseaseDAO::diseaseDAO(string fichierName)
 {
-	//sqlite3_open(dbPath,&db);
-
+	name = fichierName;
 }
+
+
 
 diseaseDAO::~diseaseDAO()
 {
@@ -18,5 +19,6 @@ diseaseDAO::~diseaseDAO()
 
 list<Disease> diseaseDAO::findAll()
 {
+	string sqlSelectStr = "SELECT * FROM Disease WHERE id = '" + to_string(id_in) + "';";
 	return list<Disease>();
 }

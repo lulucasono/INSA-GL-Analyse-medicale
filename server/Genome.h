@@ -8,6 +8,7 @@ class Genome
 public:
 	Genome();
 	virtual ~Genome();
+	const list<string>& getGene() const;
 private:
 	list<string> geneticCode;
 };

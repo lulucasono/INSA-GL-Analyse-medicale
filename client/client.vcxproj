@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{476058B1-5D13-48F3-A21E-DEE91441087E}</ProjectGuid>
     <RootNamespace>client</RootNamespace>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
     <Keyword>MFCProj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -115,6 +115,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -189,19 +190,25 @@
     <ClInclude Include="AnalysisService.h" />
     <ClInclude Include="client.h" />
     <ClInclude Include="ClientDlg.h" />
+    <ClInclude Include="CommunicationException.h" />
     <ClInclude Include="MulticastUtil.h" />
+    <ClInclude Include="ReadException.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Server.h" />
     <ClInclude Include="ServerService.h" />
+    <ClInclude Include="ServiceException.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AnalysisService.cpp" />
     <ClCompile Include="ClientDlg.cpp" />
+    <ClCompile Include="CommunicationException.cpp" />
+    <ClCompile Include="ReadException.cpp" />
     <ClCompile Include="MulticastUtil.cpp" />
     <ClCompile Include="Server.cpp" />
     <ClCompile Include="ServerService.cpp" />
+    <ClCompile Include="ServiceException.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

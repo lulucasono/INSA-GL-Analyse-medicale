@@ -12,8 +12,8 @@ public:
 	ServerDAO(const char * dbName = "Server.db");
 	~ServerDAO();
 	list<Server> findAll();
+	Server findByName(string nameServer);
 
 private:
 	sqlite3 * db;
 };
-

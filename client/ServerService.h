@@ -1,5 +1,4 @@
 #pragma once
-#pragma once
 #include <map>
 #include "Server.h"
 
@@ -20,7 +19,7 @@ public:
 	void RemoveServer(Server s);
 	// C'est une méthode manuelle, que l'user peut utiliser
 
-	std::map<std::string, std::string> GetServers();
+	std::map<std::string, Server> GetServers();
 	// Retourne les serveurs stockés dans la base de données 
 	// Dans un stockage, un serveur est représenté par une paire de strings : 
 	// son adresse IP(unique) et son nom 

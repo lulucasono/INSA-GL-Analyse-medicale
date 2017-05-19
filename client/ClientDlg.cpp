@@ -6,6 +6,7 @@
 #include "client.h"
 #include "ClientDlg.h"
 #include "afxdialogex.h"
+#include "ServerService.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -64,6 +65,7 @@ BEGIN_MESSAGE_MAP(CClientDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_BN_CLICKED(IDC_SEARCH_SERVERS, &CClientDlg::OnBnClickedSearchServers)
 END_MESSAGE_MAP()
 
 
@@ -152,3 +154,11 @@ HCURSOR CClientDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+
+void CClientDlg::OnBnClickedSearchServers()
+{
+	// TODO: ajoutez ici le code de votre gestionnaire de notification de contrôle
+	ServerService serverService;
+	serverService.UpdateFromMulticast();
+}

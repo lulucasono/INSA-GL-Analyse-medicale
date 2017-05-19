@@ -189,7 +189,7 @@
     <ClInclude Include="AnalysisService.h" />
     <ClInclude Include="client.h" />
     <ClInclude Include="ClientDlg.h" />
-    <ClInclude Include="MulticastSocket.h" />
+    <ClInclude Include="MulticastUtil.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Server.h" />
     <ClInclude Include="ServerService.h" />
@@ -199,7 +199,7 @@
   <ItemGroup>
     <ClCompile Include="AnalysisService.cpp" />
     <ClCompile Include="ClientDlg.cpp" />
-    <ClCompile Include="MulticastSocket.cpp" />
+    <ClCompile Include="MulticastUtil.cpp" />
     <ClCompile Include="Server.cpp" />
     <ClCompile Include="ServerService.cpp" />
     <ClCompile Include="stdafx.cpp">

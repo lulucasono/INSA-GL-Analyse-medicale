@@ -36,10 +36,10 @@
     <ClInclude Include="ServerService.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="MulticastSocket.h">
+    <ClInclude Include="AnalysisService.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="AnalysisService.h">
+    <ClInclude Include="MulticastUtil.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
@@ -56,10 +56,10 @@
     <ClCompile Include="ServerService.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="MulticastSocket.cpp">
+    <ClCompile Include="AnalysisService.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="AnalysisService.cpp">
+    <ClCompile Include="MulticastUtil.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>

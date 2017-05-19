@@ -1,32 +1,29 @@
-ï»¿#include "stdafx.h"
+#include "stdafx.h"
 #include "ServerService.h"
 #include <iostream>
 
 using namespace std;
 
-//typedef std::pair<std::string, std::string> pairServer;
-
-
 void ServerService::UpdateFromMulticast()
 {
-	// Ré–upé–ation des serveurs par multicast, en é–outant pendant 10 secondes + Exception eventuelle
-	std::map<std::string, std::string> foundServers;
+	// Récupération des serveurs par multicast, en écoutant pendant 10 secondes + Exception eventuelle
+	std::map<std::string, Server> foundServers;
 	// CODE TODO (Julia)  : voir Slack 
 
-	// Lecture des serveurs dé––?dans la BD + Exception eventuelle
-	std::map<std::string, std::string> fileServers;
+	// Lecture des serveurs déjà dans la BD + Exception eventuelle
+	std::map<std::string, Server> fileServers;
 	// try ... 
 	fileServers = GetServers();
 	// ... catch 
 
-	// Les serveurs qui ne sont pas dé––?dans la BD et qui sont ré–upé–é–Ÿ sont ajouté–Ÿ ?la base 
+	// Les serveurs qui ne sont pas déjà dans la BD et qui sont récupérés sont ajoutés à la base 
 	// + Exception eventuelle
-	for(std::map<std::string, std::string>::iterator it = foundServers.begin(); it!= foundServers.end(); it++)
+	for(std::map<std::string, Server>::iterator it = foundServers.begin(); it!= foundServers.end(); it++)
 	{
 		if(fileServers.find(it->first)==fileServers.end())
 		{
-			// Insertion de *it dans la BD + Exception eventuelle (impossible d'insé–er machin)
-			Server s(it->first, it->second);
+			// Insertion de *it dans la BD + Exception eventuelle (impossible d'insérer machin)
+			Server s(it->first, it->second.name());
 			AddServer(s);
 		}
 	}
@@ -35,21 +32,21 @@ void ServerService::UpdateFromMulticast()
 
 void ServerService::AddServer(Server s)
 {
-	// é–riture dans la BD + Exception eventuelle
+	// écriture dans la BD + Exception eventuelle
 	//  = appel du DAO = TODO
 }
 
 void ServerService::RemoveServer(Server s)
 {
-	// é–riture dans la BD + Exception eventuelle
+	// écriture dans la BD + Exception eventuelle
 	//  = appel du DAO = TODO
 }
 
-std::map<std::string, std::string> ServerService::GetServers()
-// la base de donné–‘s choisie est SQLite
+std::map<std::string, Server> ServerService::GetServers()
+// la base de données choisie est SQLite
 {
-	std::map<std::string, std::string> servers;
-	// lecture des serveurs stocké–Ÿ depuis la BD
+	std::map<std::string, Server> servers;
+	// lecture des serveurs stockés depuis la BD
 	//  = appel du DAO = TODO
 	// try ...
 		

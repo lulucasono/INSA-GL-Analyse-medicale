@@ -8,15 +8,16 @@ public:
 
 	////////////// CONSTRUCTOR /////////////
 
-	Server(std::string cs, std::string cs1);
+	Server(std::string *cs, std::string cs1);
 
 
 	////////// GETTER AND SETTER //////////
 
 
-	const std::string& address() const;
+	const std::string *address() const;
 
 	const std::string& name() const;
+
 
 	//////////// DESTRUCTOR /////////////////
 
@@ -29,7 +30,7 @@ private:
 	/**
 	 * Adresse IP du serveur
 	 */
-	std::string p_address;
+	std::string *p_address;
 
 
 	/**

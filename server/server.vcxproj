@@ -187,6 +187,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="ClientSocket.h" />
+    <ClInclude Include="DiscoverService.h" />
     <ClInclude Include="Disease.h" />
     <ClInclude Include="diseaseDAO.h" />
     <ClInclude Include="Genome.h" />
@@ -200,6 +201,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DiscoverService.cpp" />
     <ClCompile Include="Disease.cpp" />
     <ClCompile Include="ClientSocket.cpp" />
     <ClCompile Include="diseaseDAO.cpp" />

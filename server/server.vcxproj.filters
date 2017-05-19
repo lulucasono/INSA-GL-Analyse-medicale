@@ -51,6 +51,9 @@
     <ClInclude Include="sqlite3ext.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
+    <ClInclude Include="DiscoverService.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="server.cpp">
@@ -78,6 +81,9 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="sqlite3.c">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="DiscoverService.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>

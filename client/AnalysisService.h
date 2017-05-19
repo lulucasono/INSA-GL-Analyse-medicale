@@ -1,10 +1,13 @@
 #pragma once
 #include "../server/Genome.h"
+#include "../server/Disease.h"
+#include <list>
 
 class AnalysisService
 {
 public:
-	void EvaluateAll(Genome g);
+	list<Disease> EvaluateAll(Genome g);
+	boolean EvaluateOne(Genome g, Disease d);
 
 
 

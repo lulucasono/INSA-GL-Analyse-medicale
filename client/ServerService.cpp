@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "ServerService.h"
 #include <iostream>
 
@@ -9,23 +9,23 @@ using namespace std;
 
 void ServerService::UpdateFromMulticast()
 {
-	// Récupération des serveurs par multicast, en écoutant pendant 10 secondes + Exception eventuelle
+	// Ré–upé–ation des serveurs par multicast, en é–outant pendant 10 secondes + Exception eventuelle
 	std::map<std::string, std::string> foundServers;
 	// CODE TODO (Julia)  : voir Slack 
 
-	// Lecture des serveurs déjà dans la BD + Exception eventuelle
+	// Lecture des serveurs dé––?dans la BD + Exception eventuelle
 	std::map<std::string, std::string> fileServers;
 	// try ... 
 	fileServers = GetServers();
 	// ... catch 
 
-	// Les serveurs qui ne sont pas déjà dans la BD et qui sont récupérés sont ajoutés à la base 
+	// Les serveurs qui ne sont pas dé––?dans la BD et qui sont ré–upé–é–Ÿ sont ajouté–Ÿ ?la base 
 	// + Exception eventuelle
 	for(std::map<std::string, std::string>::iterator it = foundServers.begin(); it!= foundServers.end(); it++)
 	{
 		if(fileServers.find(it->first)==fileServers.end())
 		{
-			// Insertion de *it dans la BD + Exception eventuelle (impossible d'insérer machin)
+			// Insertion de *it dans la BD + Exception eventuelle (impossible d'insé–er machin)
 			Server s(it->first, it->second);
 			AddServer(s);
 		}
@@ -35,21 +35,21 @@ void ServerService::UpdateFromMulticast()
 
 void ServerService::AddServer(Server s)
 {
-	// écriture dans la BD + Exception eventuelle
+	// é–riture dans la BD + Exception eventuelle
 	//  = appel du DAO = TODO
 }
 
 void ServerService::RemoveServer(Server s)
 {
-	// écriture dans la BD + Exception eventuelle
+	// é–riture dans la BD + Exception eventuelle
 	//  = appel du DAO = TODO
 }
 
 std::map<std::string, std::string> ServerService::GetServers()
-// la base de données choisie est SQLite
+// la base de donné–‘s choisie est SQLite
 {
 	std::map<std::string, std::string> servers;
-	// lecture des serveurs stockés depuis la BD
+	// lecture des serveurs stocké–Ÿ depuis la BD
 	//  = appel du DAO = TODO
 	// try ...
 		

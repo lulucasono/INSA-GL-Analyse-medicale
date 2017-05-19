@@ -29,7 +29,7 @@ list<Server> ServerDAO::findAll()
 
 	if (code != 0)
 	{
-		cerr << "Error executing SQLite3 query (read_patient): " << sqlite3_errmsg(db) << endl;
+		cerr << "Error executing SQLite3 query (findAll): " << sqlite3_errmsg(db) << endl;
 		sqlite3_free(error);
 	}
 	else
@@ -64,7 +64,7 @@ Server ServerDAO::findByName(string nameServer)
 
 	if (code != 0)
 	{
-		cerr << "Error executing SQLite3 query (read_patient): " << sqlite3_errmsg(db) << endl;
+		cerr << "Error executing SQLite3 query (findByName): " << sqlite3_errmsg(db) << endl;
 		sqlite3_free(error);
 	}
 	else

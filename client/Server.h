@@ -8,15 +8,20 @@ public:
 
 	////////////// CONSTRUCTOR /////////////
 
+	Server();
 	Server(std::string *cs, std::string cs1);
 
 
 	////////// GETTER AND SETTER //////////
 
-
+	// getters
 	const std::string *address() const;
 
 	const std::string& name() const;
+
+	// setters
+	void SetAddress(std::string *address);
+	void SetName(std::string name);
 
 
 	//////////// DESTRUCTOR /////////////////

@@ -33,13 +33,13 @@ public:
 
 private:
 	/**
-	 * Adresse IP du serveur
-	 */
+	* Adresse IP du serveur
+	*/
 	std::string *p_address;
 
 
 	/**
-	 * Nom du serveur
-	 */
+	* Nom du serveur
+	*/
 	std::string p_name;
 };

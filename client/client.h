@@ -24,9 +24,19 @@ public:
 public:
 	virtual BOOL InitInstance();
 
+private:
+
+
 // Implementation
 
 	DECLARE_MESSAGE_MAP()
 };
 
 extern CclientApp theApp;
+
+
+/*BOOL CclientApp::InitInstance()
+{
+	CWinApp::InitApplication();
+	// join multicast group : DiscoverService::startMulticast()
+}*/

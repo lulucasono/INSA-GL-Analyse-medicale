@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
-
 #include "../../client/Server.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;

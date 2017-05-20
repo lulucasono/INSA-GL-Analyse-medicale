@@ -6,8 +6,9 @@ Server::Server() :p_address(nullptr), p_name("")
 
 }
 
-Server::Server(std::string *cs, std::string cs1) : p_address(cs),
-p_name(cs1)
+
+Server::Server(std::string *cs, std::string cs1): p_address(cs),
+                                                 p_name(cs1)
 {
 }
 

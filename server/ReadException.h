@@ -1,16 +1,18 @@
-#pragma once
+﻿#pragma once
 #include <exception>
 #include <string>
 
-class CommunicationException :
+class ReadException :
 	public std::exception
 {
 public:
 	virtual const char* what() const throw();
 
-	CommunicationException() throw();
-	~CommunicationException() throw();
+	ReadException() throw();
+	~ReadException() throw();
 
 private:
 	std::string m_phrase;
 };
+
+

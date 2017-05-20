@@ -1,11 +1,17 @@
 #pragma once
 #include <exception>
+#include <string>
 
 class AnalysisException :
 	public std::exception
 {
 public:
-	AnalysisException();
-	~AnalysisException();
+	virtual const char* what() const throw();
+
+	AnalysisException() throw();
+	~AnalysisException() throw();
+
+private:
+	std::string m_phrase;
 };
 

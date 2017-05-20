@@ -17,7 +17,7 @@ diseaseDAO::~diseaseDAO()
 {
 }
 
-list<Disease> diseaseDAO::findAll()
+list<Disease> diseaseDAO::FindAll()
 {
 	string sqlSelectStr = "SELECT * FROM Disease WHERE id = '" + to_string(id_in) + "';";
 	return list<Disease>();

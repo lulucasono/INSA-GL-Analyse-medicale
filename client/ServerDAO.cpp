@@ -15,7 +15,7 @@ ServerDAO::~ServerDAO()
 
 }
 
-list<Server> ServerDAO::findAll()
+list<Server> ServerDAO::FindAll()
 {
 	string sqlSelectStr = "SELECT * FROM Server;";
 	const char *sqlSelect = sqlSelectStr.c_str();
@@ -49,7 +49,7 @@ list<Server> ServerDAO::findAll()
 	return servers;
 }
 
-Server ServerDAO::findByName(string nameServer) 
+Server ServerDAO::FindByName(string nameServer) 
 {
 	string sqlSelectStr = "SELECT * FROM Server WHERE name='"+nameServer+"';";
 	const char *sqlSelect = sqlSelectStr.c_str();

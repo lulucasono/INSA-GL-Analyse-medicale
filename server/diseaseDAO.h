@@ -10,7 +10,7 @@ public:
 	diseaseDAO();
 	diseaseDAO(string fichierName="nameDeFichier");
 	~diseaseDAO();
-	list<Disease> findAll();
+	list<Disease> FindAll();
 
 private:
 	string name;

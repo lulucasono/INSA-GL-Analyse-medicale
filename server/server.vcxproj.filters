@@ -60,6 +60,9 @@
     <ClInclude Include="ReadException.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="AnalysisService.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="server.cpp">
@@ -96,6 +99,9 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="ReadException.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="AnalysisService.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>

@@ -187,6 +187,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="AnalysisException.h" />
+    <ClInclude Include="AnalysisService.h" />
     <ClInclude Include="ClientSocket.h" />
     <ClInclude Include="Disease.h" />
     <ClInclude Include="diseaseDAO.h" />
@@ -204,6 +205,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AnalysisException.cpp" />
+    <ClCompile Include="AnalysisService.cpp" />
     <ClCompile Include="Disease.cpp" />
     <ClCompile Include="ClientSocket.cpp" />
     <ClCompile Include="diseaseDAO.cpp" />

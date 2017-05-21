@@ -1,4 +1,4 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 #include "AnalysisService.h"
 #include "../server/diseaseDAO.h"
 #include <iostream>
@@ -15,7 +15,6 @@ AnalysisService::~AnalysisService()
 {
 }
 
-// --------- Implementations to change : should be requests to the server -----------------
 
 list<Disease> AnalysisService::EvaluateAll(Genome g)
 {
@@ -23,9 +22,9 @@ list<Disease> AnalysisService::EvaluateAll(Genome g)
 	diseaseDAO* dDAO = new diseaseDAO("path_db");
 	list<Disease> listDisease = dDAO->FindAll();
 	list<Disease> allDiseasePossible;
-	for(list<Disease>::iterator itD=listDisease.begin();itD!=listDisease.end();++itD)
+	for (list<Disease>::iterator itD = listDisease.begin(); itD != listDisease.end(); ++itD)
 	{
-		if(EvaluateOne(g, *itD))
+		if (EvaluateOne(g, *itD))
 		{
 			allDiseasePossible.push_back(*itD);
 		}
@@ -38,12 +37,12 @@ bool AnalysisService::EvaluateOne(Genome g, Disease d)
 {
 	bool b = true;
 	list<string> listGenome = g.getGene();
-	list<string> riskfulGenes=d.riskfulGenes();
-	
-	for (list<string>::iterator itRisk=riskfulGenes.begin(); itRisk != riskfulGenes.end(); ++itRisk)
+	list<string> riskfulGenes = d.riskfulGenes();
+
+	for (list<string>::iterator itRisk = riskfulGenes.begin(); itRisk != riskfulGenes.end(); ++itRisk)
 	{
 		list<string>::iterator itfind = find(listGenome.begin(), listGenome.end(), itRisk);
-		if(itfind!=listGenome.end()) // on a trouve
+		if (itfind != listGenome.end()) // on a trouve
 		{
 
 		}

@@ -1,6 +1,6 @@
-#include "stdafx.h"
+#include "../stdafx.h"
 #include "diseaseDAO.h"
-#include "Disease.h"
+#include "../models/Disease.h"
 
 diseaseDAO::diseaseDAO()
 {

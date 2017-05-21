@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "AnalysisService.h"
-#include "../server/diseaseDAO.h"
+#include "../server/dao/diseaseDAO.h"
 #include <iostream>
 #include <list>
 #include <algorithm>

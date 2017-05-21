@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <list>
+#include <fstream>
 #include "Disease.h"
 
 using namespace std;
@@ -8,7 +9,7 @@ class diseaseDAO
 {
 public:
 	diseaseDAO();
-	diseaseDAO(string fichierName="nameDeFichier");
+	diseaseDAO(string fileName="nameDeFichier");
 	~diseaseDAO();
 	list<Disease> FindAll();
 

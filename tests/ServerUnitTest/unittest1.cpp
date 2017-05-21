@@ -1,18 +1,30 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
+#include "../../server/diseaseDAO.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace ServerUnitTest
 {		
-	TEST_CLASS(UnitTest1)
+	TEST_CLASS(UnitTestDiseaseDAO)
 	{
 	public:
 		
-		TEST_METHOD(TestMethod1)
+		TEST_METHOD(Constructor)
 		{
-			// TODO: Ici, votre code de test
+			diseaseDAO d();
+		}
+
+		TEST_METHOD(FindAll)
+		{
+			diseaseDAO d("./diseases.txt");
+			std::list<Disease> diseases =  d.FindAll();
+			if(diseases.empty())
+			{
+				Assert::Fail();
+			}
 		}
 
 	};
+	
 }

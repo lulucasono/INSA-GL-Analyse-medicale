@@ -3,9 +3,6 @@
 #include "Disease.h"
 
 
-diseaseDAO::diseaseDAO()
-{
-}
 
 diseaseDAO::diseaseDAO(string fileName)
 {

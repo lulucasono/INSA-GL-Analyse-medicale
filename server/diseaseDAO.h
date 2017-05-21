@@ -8,7 +8,6 @@ using namespace std;
 class diseaseDAO
 {
 public:
-	diseaseDAO();
 	diseaseDAO(string fileName="nameDeFichier");
 	~diseaseDAO();
 	list<Disease> FindAll();

@@ -1,6 +1,6 @@
 #pragma once
-#include "../server/Genome.h"
-#include "../server/Disease.h"
+#include "Genome.h"
+#include "Disease.h"
 
 class AnalysisService
 {

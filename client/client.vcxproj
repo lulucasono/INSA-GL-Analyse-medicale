@@ -191,6 +191,8 @@
     <ClInclude Include="client.h" />
     <ClInclude Include="ClientDlg.h" />
     <ClInclude Include="CommunicationException.h" />
+    <ClInclude Include="Disease.h" />
+    <ClInclude Include="Genome.h" />
     <ClInclude Include="MulticastUtil.h" />
     <ClInclude Include="ReadException.h" />
     <ClInclude Include="Resource.h" />
@@ -198,6 +200,7 @@
     <ClInclude Include="ServerDAO.h" />
     <ClInclude Include="ServerService.h" />
     <ClInclude Include="ServiceException.h" />
+    <ClInclude Include="sqlite3.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -205,12 +208,15 @@
     <ClCompile Include="AnalysisService.cpp" />
     <ClCompile Include="ClientDlg.cpp" />
     <ClCompile Include="CommunicationException.cpp" />
+    <ClCompile Include="Disease.cpp" />
+    <ClCompile Include="Genome.cpp" />
     <ClCompile Include="ReadException.cpp" />
     <ClCompile Include="MulticastUtil.cpp" />
     <ClCompile Include="Server.cpp" />
     <ClCompile Include="ServerDAO.cpp" />
     <ClCompile Include="ServerService.cpp" />
     <ClCompile Include="ServiceException.cpp" />
+    <ClCompile Include="sqlite3.c" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

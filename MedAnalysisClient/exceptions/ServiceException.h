@@ -8,7 +8,7 @@ class ServiceException :
 
  public:
   ServiceException();
-  ~ServiceException();
+  virtual ~ServiceException();
 };
 
 #endif // MEDANALYSIS_CLIENT_SERVICE_EXCEPTION_H

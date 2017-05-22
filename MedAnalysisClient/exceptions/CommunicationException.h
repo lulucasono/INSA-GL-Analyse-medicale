@@ -8,7 +8,7 @@ class CommunicationException :
 
  public:
   CommunicationException();
-  ~CommunicationException();
+  virtual ~CommunicationException();
 };
 
 #endif // MEDANALYSIS_CLIENT_COMMUNICATION_EXCEPTION_H

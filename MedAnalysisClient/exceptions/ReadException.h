@@ -8,7 +8,7 @@ class ReadException :
 
  public:
   ReadException();
-  ~ReadException();
+  virtual ~ReadException();
 };
 
 #endif // MEDANALYSIS_CLIENT_READ_EXCEPTION_H

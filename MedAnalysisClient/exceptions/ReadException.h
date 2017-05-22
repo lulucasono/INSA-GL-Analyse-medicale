@@ -11,4 +11,4 @@ class ReadException :
   ~ReadException();
 };
 
-#endif MEDANALYSIS_CLIENT_READ_EXCEPTION_H
+#endif // MEDANALYSIS_CLIENT_READ_EXCEPTION_H

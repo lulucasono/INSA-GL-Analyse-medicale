@@ -11,4 +11,4 @@ class ServiceException :
   ~ServiceException();
 };
 
-#endif MEDANALYSIS_CLIENT_SERVICE_EXCEPTION_H
+#endif // MEDANALYSIS_CLIENT_SERVICE_EXCEPTION_H

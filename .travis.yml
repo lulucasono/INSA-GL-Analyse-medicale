@@ -27,7 +27,7 @@ install:
 
 before_script:
   - cd "${TRAVIS_BUILD_DIR}"
-  - cmake . -Bbuild -DCMAKE_CXX_COMPILER="$CXX" -DCMAKE_C_COMPILER="$CC" -DCMAKE_BUILD_TYPE=$BUILD_TYPE
+  - cmake . -Bbuild
   - cmake --build build -- -j$JOBS
 
 script:

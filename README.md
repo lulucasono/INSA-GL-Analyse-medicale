@@ -17,6 +17,10 @@
 
 ### Compilation
 
+Pour compiler l'ensemble des sous-projets :
+```bash
+cmake
+```
 #### Serveur
 
 ```bash

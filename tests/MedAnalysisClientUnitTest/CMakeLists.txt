@@ -6,4 +6,4 @@ file(GLOB SOURCE_FILES
 
 add_executable(MedAnalysisClientUnitTest ${SOURCE_FILES})
 target_link_libraries(MedAnalysisClientUnitTest Catch MedAnalysisClient)
-target_include_directories(MedAnalysisClientUnitTest ${HDR_CLIENT})
+target_include_directories(MedAnalysisClientUnitTest PUBLIC ${HDR_CLIENT})

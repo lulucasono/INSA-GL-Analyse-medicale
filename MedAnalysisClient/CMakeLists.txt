@@ -5,8 +5,10 @@ file(GLOB SOURCE_FILES
         "**/*.h"
         )
 
+get_filename_component(HDR_DIR "./"
+        REALPATH BASE_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
 
-set(HDR_CLIENT CACHE INTERNAL  ${SOURCE_FILES})
+set(HDR_CLIENT ${HDR_DIR} CACHE INTERNAL "")
 
 add_library(MedAnalysisClient ${SOURCE_FILES})
 

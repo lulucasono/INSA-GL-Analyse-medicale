@@ -1,19 +1,35 @@
 cmake_minimum_required(VERSION 3.7)
 
-file(GLOB SOURCE_FILES
-        "**/*.cpp"
-        "**/*.h"
-        )
+#----------------------------------------#
+#------------ CLIENT LIBRARY ------------#
+#----------------------------------------#
 
-get_filename_component(HDR_DIR "./"
-        REALPATH BASE_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
+set(TARGET_NAME MedAnalysisClient)
 
+#---- Source files ----#
+
+file(GLOB SOURCE_FILES "**/*.cpp")
+
+
+#---- Headers ----#
+
+get_filename_component(HDR_DIR "./" REALPATH BASE_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
 set(HDR_CLIENT ${HDR_DIR} CACHE INTERNAL "")
 
-add_library(MedAnalysisClient ${SOURCE_FILES})
-target_include_directories(MedAnalysisClient PUBLIC ${HDR_SQLITE})
-target_link_libraries(MedAnalysisClient sqlite3)
+
+#---- Target ----#
+
+add_library(${TARGET_NAME} ${SOURCE_FILES})
+target_include_directories(${TARGET_NAME} PUBLIC ${HDR_SQLITE})
+
+# Target Library
+target_link_libraries(${TARGET_NAME} sqlite3)
 
 
-add_executable(MedAnalysisClientExe ${SOURCE_FILES})
-target_link_libraries(MedAnalysisClientExe MedAnalysisClient)
+
+#-------------------------------------------#
+#------------ CLIENT EXECUTABLE ------------#
+#-------------------------------------------#
+
+add_executable(${TARGET_NAME}Exe ${SOURCE_FILES})
+target_link_libraries(${TARGET_NAME}Exe ${TARGET_NAME})

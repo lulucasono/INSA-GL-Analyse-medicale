@@ -1,10 +1,18 @@
 cmake_minimum_required(VERSION 3.7)
 
-file(GLOB SOURCE_FILES
-        "*.cpp"
-        )
+#-------------------------------------#
+#------------ CLIENT TEST ------------#
+#-------------------------------------#
 
-add_executable(MedAnalysisClientUnitTest ${SOURCE_FILES})
+set(TARGET_NAME MedAnalysisClientUnitTest)
 
-target_include_directories(MedAnalysisClientUnitTest PUBLIC ${HDR_CLIENT})
-target_link_libraries(MedAnalysisClientUnitTest MedAnalysisClient Catch)
+#---- Source files ----#
+
+file(GLOB SOURCE_FILES "*.cpp")
+
+
+#---- Target ----#
+
+add_executable(${TARGET_NAME} ${SOURCE_FILES})
+target_link_libraries(${TARGET_NAME} MedAnalysisClient Catch)
+target_include_directories(${TARGET_NAME} PUBLIC ${HDR_CLIENT})

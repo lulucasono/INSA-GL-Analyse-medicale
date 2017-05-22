@@ -1,19 +1,30 @@
 cmake_minimum_required(VERSION 3.7)
 
-file(GLOB SOURCE_FILES
-        "**/*.cpp"
-        "**/*.h"
-        )
+#----------------------------------------#
+#------------ SERVER LIBRARY ------------#
+#----------------------------------------#
 
-get_filename_component(HDR_DIR "./"
-        REALPATH BASE_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
+set(TARGET_NAME MedAnalysisServer)
 
+#---- Source files ----#
+
+file(GLOB SOURCE_FILES "**/*.cpp")
+
+
+#---- Headers ----#
+
+get_filename_component(HDR_DIR "./" REALPATH BASE_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
 set(HDR_SERVER ${HDR_DIR} CACHE INTERNAL "")
 
-add_library(MedAnalysisServer ${SOURCE_FILES})
-target_include_directories(MedAnalysisServer PUBLIC ${HDR_SQLITE})
-target_link_libraries(MedAnalysisServer sqlite3)
+
+#---- Target ----#
+
+add_library(${TARGET_NAME} ${SOURCE_FILES})
 
 
-add_executable(MedAnalysisServerExe ${SOURCE_FILES})
-target_link_libraries(MedAnalysisServerExe MedAnalysisServer)
+#-------------------------------------------#
+#------------ CLIENT EXECUTABLE ------------#
+#-------------------------------------------#
+
+add_executable(${TARGET_NAME}Exe ${SOURCE_FILES})
+target_link_libraries(${TARGET_NAME}Exe ${TARGET_NAME})

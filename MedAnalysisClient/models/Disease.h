@@ -4,15 +4,14 @@
 #include <string>
 
 class Disease {
-public:
+ public:
 
-    Disease(const std::string &p_name);
+  Disease(const std::string &p_name);
 
-    const std::string &name() const;
+  const std::string &name() const;
 
-
-private:
-    std::string p_name;
+ private:
+  std::string p_name;
 };
 
 #endif //MEDANALYSIS_CLIENT_DISEASE_H

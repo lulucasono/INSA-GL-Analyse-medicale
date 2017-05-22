@@ -11,9 +11,9 @@ get_filename_component(HDR_DIR "./"
 set(HDR_SERVER ${HDR_DIR} CACHE INTERNAL "")
 
 add_library(MedAnalysisServer ${SOURCE_FILES})
+target_include_directories(MedAnalysisServer PUBLIC ${HDR_SQLITE})
+target_link_libraries(MedAnalysisServer sqlite3)
+
 
 add_executable(MedAnalysisServerExe ${SOURCE_FILES})
-target_link_libraries(
-        MedAnalysisServerExe
-        MedAnalysisServer
-)
+target_link_libraries(MedAnalysisServerExe MedAnalysisServer)

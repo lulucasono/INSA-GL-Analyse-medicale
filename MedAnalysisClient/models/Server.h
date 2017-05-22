@@ -5,16 +5,20 @@
 
 class Server {
 
-public:
+ public:
 
-    Server(const std::string &p_address, const std::string &p_name);
+  Server ();
+  Server (const std::string &p_address, const std::string &p_name);
 
-    const std::string &name() const;
-    const std::string &address() const;
+  const std::string &name () const;
+  const std::string &address () const;
 
-private:
-    std::string p_address;
-    std::string p_name;
+  void setAddress (const std::string &p_address);
+  void setName (const std::string &p_name);
+
+ private:
+  std::string p_address;
+  std::string p_name;
 };
 
 #endif //MEDANALYSIS_CLIENT_SERVER_H

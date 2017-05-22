@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "ServerService.h"
 #include <iostream>
-#include "MulticastUtil.h"
+#include "utils/MulticastUtil.h"
 
 using namespace std;
 
@@ -12,12 +12,12 @@ static const UINT TIME_TO_PULL = 10 * 1000;
 
 void ServerService::UpdateFromMulticast()
 {
-	// Récupération des serveurs par multicast, en écoutant pendant 10 secondes + Exception eventuelle
+	// Rï¿½cupï¿½ration des serveurs par multicast, en ï¿½coutant pendant 10 secondes + Exception eventuelle
 	server_map foundServers;
 	// CODE TODO (Julia)  : voir Slack 
 	MulticastUtil multicast([](string data)
 	                        {
-		                        cout << "Nouvelles données envoyées :" << data;
+		                        cout << "Nouvelles donnï¿½es envoyï¿½es :" << data;
 	                        }, 
 		TIME_TO_PULL);
 
@@ -26,20 +26,20 @@ void ServerService::UpdateFromMulticast()
 
 	cout << "Recherche de serveur en cours..." << endl;
 
-	// Dès qu'un serveur sera trouvé, la fonction OnNewServer sera appelée
+	// Dï¿½s qu'un serveur sera trouvï¿½, la fonction OnNewServer sera appelï¿½e
 
 	/*
 		// try ... 
 		server_map fileServers = GetServers();
 		// ... catch 
 
-		// Les serveurs qui ne sont pas déjà dans la BD et qui sont récupérés sont ajoutés à la base 
+		// Les serveurs qui ne sont pas dï¿½jï¿½ dans la BD et qui sont rï¿½cupï¿½rï¿½s sont ajoutï¿½s ï¿½ la base 
 		// + Exception eventuelle
 		for (server_map::iterator it = foundServers.begin(); it != foundServers.end(); it++)
 		{
 			if (fileServers.find(it->first) == fileServers.end())
 			{
-				// Insertion de *it dans la BD + Exception eventuelle (impossible d'insérer machin)
+				// Insertion de *it dans la BD + Exception eventuelle (impossible d'insï¿½rer machin)
 				AddServer(it->second);
 			}
 		}
@@ -48,21 +48,21 @@ void ServerService::UpdateFromMulticast()
 
 void ServerService::AddServer(Server s)
 {
-	// écriture dans la BD + Exception eventuelle
+	// ï¿½criture dans la BD + Exception eventuelle
 	//  = appel du DAO = TODO
 }
 
 void ServerService::RemoveServer(Server s)
 {
-	// écriture dans la BD + Exception eventuelle
+	// ï¿½criture dans la BD + Exception eventuelle
 	//  = appel du DAO = TODO
 }
 
 server_map ServerService::GetServers()
-// la base de données choisie est SQLite
+// la base de donnï¿½es choisie est SQLite
 {
 	server_map servers;
-	// lecture des serveurs stockés depuis la BD
+	// lecture des serveurs stockï¿½s depuis la BD
 	//  = appel du DAO = TODO
 	// try ...
 

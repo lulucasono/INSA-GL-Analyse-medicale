@@ -11,9 +11,9 @@ get_filename_component(HDR_DIR "./"
 set(HDR_CLIENT ${HDR_DIR} CACHE INTERNAL "")
 
 add_library(MedAnalysisClient ${SOURCE_FILES})
+target_include_directories(MedAnalysisClient PUBLIC ${HDR_SQLITE})
+target_link_libraries(MedAnalysisClient sqlite3)
+
 
 add_executable(MedAnalysisClientExe ${SOURCE_FILES})
-target_link_libraries(
-        MedAnalysisClientExe
-        MedAnalysisClient
-)
+target_link_libraries(MedAnalysisClientExe MedAnalysisClient)

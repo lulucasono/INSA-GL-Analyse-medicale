@@ -8,7 +8,7 @@ set(TARGET_NAME MedAnalysisServerUnitTest)
 
 #---- Source files ----#
 
-file(GLOB SOURCE_FILES "*.cpp")
+file(GLOB_RECURSE SOURCE_FILES "*.cpp")
 
 
 #---- Target ----#

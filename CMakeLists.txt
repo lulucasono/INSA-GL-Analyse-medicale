@@ -16,3 +16,4 @@ add_subdirectory(tests/MedAnalysisServerUnitTest)
 
 enable_testing()
 add_test(NAME MedAnalysisClientUnitTest COMMAND MedAnalysisClientUnitTest)
+add_test(NAME MedAnalysisServerUnitTest COMMAND MedAnalysisServerUnitTest)

@@ -28,11 +28,11 @@ install:
 before_script:
   - cd "${TRAVIS_BUILD_DIR}"
   - cmake . -Bbuild
-  - cmake --build build -- -j$JOBS
+  - cmake --build build -- -j2
 
 script:
   - cd build
-  - ctest --output-on-failure -j$JOBS
+  - ctest --output-on-failure -j2
 
 notifications:
   email: false

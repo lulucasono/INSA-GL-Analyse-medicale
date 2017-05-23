@@ -7,6 +7,8 @@
 #include <fstream>
 #include "../models/Disease.h"
 #include "../utils/utils.h"
+#include "../exceptions/DiseaseNotFoundException.h"
+#include "../exceptions/ReadException.h"
 
 using std::string;
 using std::unordered_multimap;

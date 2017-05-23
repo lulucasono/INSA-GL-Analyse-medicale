@@ -7,8 +7,8 @@ class ReadException :
 		public std::exception {
 
  public:
-  ReadException();
-  virtual ~ReadException();
+  ReadException() {}
+  virtual ~ReadException() {}
 };
 
 #endif // MEDANALYSIS_CLIENT_READ_EXCEPTION_H

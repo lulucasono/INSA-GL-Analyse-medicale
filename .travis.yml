@@ -1,6 +1,12 @@
 # Based on https://github.com/Microsoft/GSL/blob/master/.travis.yml
 
 language: cpp
+compiler: g++
+
+before_install:
+- sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+- sudo apt-get update -qq
+
 sudo: false
 
 cache:
@@ -10,6 +16,8 @@ cache:
 install:
   - DEPS_DIR="${TRAVIS_BUILD_DIR}/deps"
   - mkdir -p "${DEPS_DIR}" && cd "${DEPS_DIR}"
+  - sudo apt-get install -qq g++-4.8
+  - export CXX="g++-4.8"
 
   ############################################################################
   # Install a recent CMake (unless already installed on OS X)

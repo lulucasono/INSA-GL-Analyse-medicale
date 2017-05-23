@@ -1,6 +1,6 @@
 # Projet Génie Logiciel - Analyse médicale
 
-[![license](https://img.shields.io/github/license/embraser01/INSA-GL-Analyse-medicale.svg)](./LICENSE.md)
+[![license](https://img.shields.io/github/license/Embraser01/INSA-GL-Analyse-medicale.svg)](./LICENSE.md)
 [![build](https://api.travis-ci.org/Embraser01/INSA-GL-Analyse-medicale.svg?branch=prod)](https://travis-ci.org/Embraser01/INSA-GL-Analyse-medicale)
 
 ## Presentation

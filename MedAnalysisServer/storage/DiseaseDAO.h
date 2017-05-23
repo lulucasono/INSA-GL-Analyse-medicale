@@ -2,29 +2,34 @@
 #define MEDANALYSIS_SERVER_DISEASEDAO_H
 
 #include <string>
-using std::string;
-
+#include <unordered_map>
 #include <vector>
-using std::vector;
-
 #include <fstream>
-using std::ifstream;
-
 #include "../models/Disease.h"
 #include "../utils/utils.h"
 
-
+using std::string;
+using std::unordered_multimap;
+using std::pair;
+using std::vector;
+using std::ifstream;
 
 class DiseaseDAO {
- public:
-  DiseaseDAO(std::string fileName = "Diseases.txt");
+public:
+    DiseaseDAO(string fileName = "Diseases.txt");
 
-  ~DiseaseDAO();
+    ~DiseaseDAO();
 
-  vector<Disease> FindAll();
+    const unordered_multimap<string, Disease> findAll();
 
- private:
-  string name;
+    const pair<
+            unordered_multimap<string, Disease>::iterator,
+            unordered_multimap<string, Disease>::iterator
+    > findByName(const string basic_string);
+
+private:
+    string name;
+    unordered_multimap<string, Disease> diseases;
 };
 
 #endif //MEDANALYSIS_SERVER_DISEASEDAO_H

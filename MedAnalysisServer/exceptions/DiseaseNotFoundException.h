@@ -11,7 +11,7 @@ public:
 
     virtual ~DiseaseNotFoundException() {}
 
-    const char *what() const override {
+    const char *what() const noexcept {
         return "La maladie envoyé n'existe pas sur ce serveur";
     }
 };

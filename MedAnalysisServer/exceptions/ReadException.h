@@ -11,7 +11,7 @@ public:
 
     virtual ~ReadException() {}
 
-    const char *what() const override {
+    const char *what() const noexcept {
         return "Erreur lors de la lecture du dictionnaire des maladies";
     }
 };

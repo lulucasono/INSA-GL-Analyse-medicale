@@ -11,8 +11,9 @@ public:
 
     virtual ~AnalysisException() {}
 
-    const char *what() const override {
+    const char *what() const noexcept {
         return "Erreur lors de l'analyse du génome";
     }
 };
+
 #endif //MEDANALYSIS_SERVER_ANALYSISEXCEPTION_H

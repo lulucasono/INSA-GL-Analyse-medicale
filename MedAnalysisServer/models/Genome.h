@@ -1,19 +1,17 @@
 #ifndef MEDANALYSIS_SERVER_GENOME_H
 #define MEDANALYSIS_SERVER_GENOME_H
-#pragma once
-#include <list>
 
-using namespace std;
+#include <string>
+#include <vector>
 
-class Genome
-{
-public:
-    Genome();
-    virtual ~Genome();
-    const list<string>& getGene() const;
-private:
-    list<string> geneticCode;
+class Genome {
+ public:
+  Genome();
+  virtual ~Genome();
+
+  const std::vector<std::string> &getGene() const;
+ private:
+  std::vector<std::string> geneticCode;
 };
-
 
 #endif //MEDANALYSIS_SERVER_GENOME_H

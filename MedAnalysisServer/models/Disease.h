@@ -1,29 +1,24 @@
 #ifndef MEDANALYSIS_SERVER_DISEASE_H
 #define MEDANALYSIS_SERVER_DISEASE_H
-#pragma once
 #include <iostream>
-#include <list>
+#include <vector>
 
-using namespace std;
+class Disease {
+ public:
+  //////constructor///////
+  Disease(std::string cs, std::vector<std::string> li);
 
-class Disease
-{
-public:
-    //////constructor///////
-    Disease(string cs,list<string> li);
+  //////getter and setter//////
 
-    //////getter and setter//////
+  const std::string &name() const;
+  const std::vector<std::string> &riskfulGenes() const;
 
-    const string& name() const;
-    const list<string>& riskfulGenes() const;
-
-    //////destructor//////
-    virtual ~Disease();
-private:
-    string d_name;
-    list<string> d_list;
+  //////destructor//////
+  virtual ~Disease();
+ private:
+  std::string p_name;
+  std::vector<std::string> p_list;
 
 };
-
 
 #endif //MEDANALYSIS_SERVER_DISEASE_H

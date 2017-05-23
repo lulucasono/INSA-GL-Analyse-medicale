@@ -1,26 +1,15 @@
-#include "stdafx.h"
 #include "Disease.h"
-using namespace std;
 
-
-Disease::Disease(string name,list<string>li):d_name(name),d_list(li)
-{
+Disease::Disease(std::string name, std::vector<std::string> li) : p_name(name), p_list(li) {
 }
 
-const string& Disease::name() const
-{
-    return d_name;
+const std::string &Disease::name() const {
+  return p_name;
 }
 
-const list<string>& Disease::riskfulGenes() const
-{
-    return d_list;
+const std::vector<std::string> &Disease::riskfulGenes() const {
+  return p_list;
 }
 
-
-
-
-
-Disease::~Disease()
-{
+Disease::~Disease() {
 }

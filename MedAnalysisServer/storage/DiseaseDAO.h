@@ -1,22 +1,30 @@
 #ifndef MEDANALYSIS_SERVER_DISEASEDAO_H
 #define MEDANALYSIS_SERVER_DISEASEDAO_H
 
-#pragma once
 #include <string>
-#include <list>
+using std::string;
+
+#include <vector>
+using std::vector;
+
 #include <fstream>
+using std::ifstream;
+
 #include "../models/Disease.h"
+#include "../utils/utils.h"
 
-using namespace std;
-class DiseaseDAO
-{
-public:
-    DiseaseDAO(string fileName="nameDeFichier");
-    ~diseaseDAO();
-    list<Disease> FindAll();
 
-private:
-    string name;
+
+class DiseaseDAO {
+ public:
+  DiseaseDAO(std::string fileName = "Diseases.txt");
+
+  ~DiseaseDAO();
+
+  vector<Disease> FindAll();
+
+ private:
+  string name;
 };
 
 #endif //MEDANALYSIS_SERVER_DISEASEDAO_H

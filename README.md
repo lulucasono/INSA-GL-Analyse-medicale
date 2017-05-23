@@ -26,7 +26,7 @@
 
 ### Configurer l'environnement
 
-Le projet utilise Cmake. Cela permet d'être compatible avec CLion, 
+Le projet utilise cmake. Cela permet d'être compatible avec CLion, 
 Code Blocks mais également Visual Studio.
 
 #### Visual Studio

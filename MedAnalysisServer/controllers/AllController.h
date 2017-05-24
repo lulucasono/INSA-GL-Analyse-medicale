@@ -4,6 +4,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "../services/AnalysisService.h"
+#include "../models/Genome.h"
 #include "../utils/utils.h"
 
 using std::istream;

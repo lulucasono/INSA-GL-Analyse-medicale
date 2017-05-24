@@ -1,3 +1,6 @@
+#ifndef MEDANALYSIS_SERVER_UTILS_H
+#define MEDANALYSIS_SERVER_UTILS_H
+
 #include <string>
 #include <sstream>
 #include <vector>
@@ -12,3 +15,5 @@ bool check_char_presence(std::vector<std::string> strings, const char* allowedCh
 
 
 std::vector<std::string> getError(std::string errorMsg);
+
+#endif //MEDANALYSIS_SERVER_UTILS_H

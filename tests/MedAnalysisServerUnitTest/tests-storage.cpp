@@ -2,7 +2,7 @@
 #include <storage/DiseaseDAO.h>
 
 TEST_CASE( "loading diseases names", "[storage]" ) {
-    DiseaseDAO diseaseDAO = DiseaseDAO("../../../tests/datatest/diseases.txt");
+    DiseaseDAO diseaseDAO = DiseaseDAO("../../../res/diseases.txt");
     auto diseasesMap = diseaseDAO.findAll();
     std::vector<std::string> names;
     names.push_back("Maladie");
@@ -16,7 +16,7 @@ TEST_CASE( "loading diseases names", "[storage]" ) {
 }
 
 TEST_CASE( "finding diseases by name", "[storage]" ) {
-    DiseaseDAO diseaseDAO = DiseaseDAO("../../../tests/datatest/diseases.txt");
+    DiseaseDAO diseaseDAO = DiseaseDAO("../../../res/diseases.txt");
     auto diseasePair = diseaseDAO.findByName("Maladie");
     REQUIRE(diseasePair.first->first=="Maladie");
     REQUIRE(diseasePair.first->second.name()=="Maladie");

@@ -10,14 +10,19 @@ vector<string> AllController::doCompleteEvaluation(vector<string> req) {
     string word_list = req[2];
 
     vector<string> genes = split(word_list,EOP,true);
+    int i = 0;
 
+    for (i=0;i<genes.size();i++)
+    {
+        chech_char_presence()
+    }
     Genome genome = Genome(genes);
 
     vector<Disease> diseases = service.evaluateAll(genome);
 
     vector<string> res;
     res.push_back("MA v1.0");
-    for (int i = 0;i<diseases.size();i++)
+    for (i = 0;i<diseases.size();i++)
     {
         res.push_back("DISEASE "+diseases[i].name());
     }

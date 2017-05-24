@@ -6,6 +6,10 @@ vector<string> OneController::doOneEvaluation(vector<string> req) {
     // TODO Parsing pour evaluation d'une maladie (récupérer la maladie, etc...)
     string diseaseName = req[2];
     vector<string> genes = split(req[3], ';', false);
+    const char * allowed = "ATCG";
+    if(!check_char_presence(genes,allowed)){
+        return getError("Unauthorized character found in the genetic code, aborting analysis");
+    }
     AnalysisService services = AnalysisService();
     auto disease = services.getDiseaseByName(diseaseName);
     Genome genome = Genome(genes);

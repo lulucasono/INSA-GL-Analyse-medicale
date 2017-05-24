@@ -7,6 +7,7 @@
 #include "../models/Disease.h"
 #include "../models/Genome.h"
 #include "../storage/DiseaseDAO.h"
+#include "../exceptions/AnalysisException.h"
 
 using std::vector;
 using std::string;

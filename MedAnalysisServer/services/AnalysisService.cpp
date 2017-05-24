@@ -17,8 +17,7 @@ unordered_multimap<string, Disease> AnalysisService::getDisease() {
     try {
         return diseaseDAO.findAll();
     } catch (std::exception exception) {
-        // TODO Throw ServiceExcpetion
-        throw "Nop";
+        throw AnalysisException();
     }
 }
 
@@ -29,8 +28,7 @@ const pair<
     try {
         return diseaseDAO.findByName(name);
     } catch (std::exception exception) {
-        // TODO Throw ServiceExcpetion
-        throw "Nop";
+        throw AnalysisException();
     }
 }
 

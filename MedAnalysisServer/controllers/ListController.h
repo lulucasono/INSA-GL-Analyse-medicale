@@ -3,14 +3,16 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 using std::istream;
 using std::string;
+using std::vector;
 
 class ListController {
 public:
 
-    string doGetList(string req);
+    vector<string> doGetList(vector<string> req);
 
 };
 

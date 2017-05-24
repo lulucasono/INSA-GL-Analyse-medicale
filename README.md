@@ -1,6 +1,6 @@
 # Projet Génie Logiciel - Analyse médicale
 
-[![license](https://img.shields.io/github/license/embraser01/INSA-GL-Analyse-medicale.svg)](./LICENSE.md)
+[![license](https://img.shields.io/github/license/Embraser01/INSA-GL-Analyse-medicale.svg)](./LICENSE.md)
 [![build](https://api.travis-ci.org/Embraser01/INSA-GL-Analyse-medicale.svg?branch=prod)](https://travis-ci.org/Embraser01/INSA-GL-Analyse-medicale)
 
 ## Presentation
@@ -26,7 +26,7 @@
 
 ### Configurer l'environnement
 
-Le projet utilise Cmake. Cela permet d'être compatible avec CLion, 
+Le projet utilise cmake. Cela permet d'être compatible avec CLion, 
 Code Blocks mais également Visual Studio.
 
 #### Visual Studio

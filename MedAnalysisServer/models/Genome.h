@@ -5,13 +5,17 @@
 #include <vector>
 
 class Genome {
- public:
-  Genome();
-  virtual ~Genome();
+public:
+    Genome();
 
-  const std::vector<std::string> &getGene() const;
- private:
-  std::vector<std::string> geneticCode;
+    Genome(std::vector<std::string> &genes);
+
+    virtual ~Genome();
+
+    const std::vector<std::string> &getGene() const;
+
+private:
+    std::vector<std::string> geneticCode;
 };
 
 #endif //MEDANALYSIS_SERVER_GENOME_H

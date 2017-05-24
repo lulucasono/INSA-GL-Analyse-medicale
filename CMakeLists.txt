@@ -21,17 +21,6 @@ add_library(Catch INTERFACE)
 target_include_directories(Catch INTERFACE libs/catch)
 
 
-#---- Sqlite3 ----#
-
-# Source files
-add_library(sqlite3 ./libs/sqlite3/sqlite3.c)
-target_link_libraries(sqlite3 pthread dl)
-
-# Headers
-get_filename_component(HDR_DIR "./libs/sqlite3" REALPATH BASE_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
-set(HDR_SQLITE ${HDR_DIR} CACHE INTERNAL "")
-
-
 #--------------------------------------#
 #------------ SUB-PROJECTS ------------#
 #--------------------------------------#

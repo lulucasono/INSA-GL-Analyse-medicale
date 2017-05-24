@@ -33,3 +33,13 @@ std::vector<std::string> getError(std::string errorMsg) {
     res.push_back("");
     return res;
 }
+
+bool check_char_presence(std::vector<std::string> strings, const char *allowedChars) {
+
+    for (auto it = strings.begin(); it != strings.end(); it++) {
+        if (it->find_first_not_of(allowedChars) != std::string::npos) {
+            return false;
+        }
+    }
+    return true;
+}

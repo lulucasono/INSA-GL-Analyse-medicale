@@ -2,7 +2,7 @@
 #include "../services/AnalysisService.h"
 
 
-vector<string> OneController::doOneEvaluation(vector<string> req) {
+vector<string> OneController::doOneEvaluation(vector<string> req,const string filePath) {
     // TODO Parsing pour evaluation d'une maladie (récupérer la maladie, etc...)
     string diseaseName = req[2];
     vector<string> genes = split(req[3], ';', false);
@@ -10,7 +10,7 @@ vector<string> OneController::doOneEvaluation(vector<string> req) {
     if(!check_char_presence(genes,allowed)){
         return getError("Unauthorized character found in the genetic code, aborting analysis");
     }
-    AnalysisService services = AnalysisService();
+    AnalysisService services = AnalysisService(filePath);
     auto disease = services.getDiseaseByName(diseaseName);
     Genome genome = Genome(genes);
     bool risk = false;

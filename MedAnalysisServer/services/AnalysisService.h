@@ -21,7 +21,7 @@ public:
 
     AnalysisService();
 
-    AnalysisService(string filePath);
+    AnalysisService(const string filePath);
 
     vector<Disease> evaluateAll(Genome &g);
 

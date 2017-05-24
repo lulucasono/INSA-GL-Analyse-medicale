@@ -38,12 +38,8 @@ const unordered_multimap<string, Disease> DiseaseDAO::findAll() {
 
             diseaseName = linePart.at(0);
             linePart.erase(linePart.begin());
-
-            for (auto it = linePart.begin(); it != linePart.end(); it++) {
-                if (it->find_first_not_of(ALLOWED_CHAR) != string::npos) {
-                    throw ReadException();
-                    // TODO Exit Program
-                }
+            if (check_char_presence(linePart, ALLOWED_CHAR)) {
+                throw ReadException();
             }
 
             diseases.emplace(diseaseName, Disease(diseaseName, linePart));

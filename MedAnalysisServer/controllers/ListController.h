@@ -5,12 +5,16 @@
 #include <string>
 #include <vector>
 
+#include "../services/AnalysisService.h"
+
 using std::istream;
 using std::string;
 using std::vector;
 
 class ListController {
 public:
+
+    ListController(string &filePath);
 
     vector<string> doGetList(vector<string> req);
 

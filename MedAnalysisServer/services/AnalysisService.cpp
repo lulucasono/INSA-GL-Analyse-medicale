@@ -53,4 +53,8 @@ AnalysisService::AnalysisService() {
     diseaseDAO = DiseaseDAO(/* TODO Get path argument */);
 }
 
+AnalysisService::AnalysisService(string filePath) {
+    diseaseDAO = DiseaseDAO(filePath);
+}
+
 

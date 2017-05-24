@@ -1,5 +1,3 @@
-#include <sys/param.h>
-#include <zconf.h>
 #include "DiseaseDAO.h"
 
 const static char DELIM = ';';
@@ -17,8 +15,6 @@ const unordered_multimap<string, Disease> DiseaseDAO::findAll() {
     if (!diseases.empty()) {
         return diseases;
     }
-    char temp[MAXPATHLEN];
-    std::cout<<( getcwd(temp, MAXPATHLEN) ? std::string( temp ) : std::string("") );
 
     ifstream fin;
     fin.open(name);

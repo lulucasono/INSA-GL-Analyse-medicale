@@ -1,6 +1,6 @@
 #include "ListController.h"
 
-string ListController::doGetList(string req) {
+vector<string> ListController::doGetList(vector<string> req) {
     // TODO Renvoyer un string contenant la liste des maladies disponibles (attention aux doublons)
-    return std::string();
+    return vector<string>();
 }

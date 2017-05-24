@@ -3,14 +3,16 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 using std::istream;
 using std::string;
+using std::vector;
 
 class OneController {
 public:
 
-    string doOneEvaluation(string req);
+    vector<string> doOneEvaluation(vector<string> req);
 
 };
 

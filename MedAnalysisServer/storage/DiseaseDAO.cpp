@@ -1,6 +1,7 @@
 #include "DiseaseDAO.h"
 
 const static char DELIM = ';';
+const static char *ALLOWED_CHAR = "ATCG";
 
 DiseaseDAO::DiseaseDAO(string fileName) {
     name = fileName;
@@ -18,7 +19,8 @@ const unordered_multimap<string, Disease> DiseaseDAO::findAll() {
     ifstream fin;
     fin.open(name);
     if (!fin.good() || fin.eof()) {
-        // TODO Throw File Not Good exception
+        throw ReadException();
+        // TODO Exit Program
     }
 
     vector<string> linePart;
@@ -37,11 +39,19 @@ const unordered_multimap<string, Disease> DiseaseDAO::findAll() {
             diseaseName = linePart.at(0);
             linePart.erase(linePart.begin());
 
+            for (auto it = linePart.begin(); it != linePart.end(); it++) {
+                if (it->find_first_not_of(ALLOWED_CHAR) != string::npos) {
+                    throw ReadException();
+                    // TODO Exit Program
+                }
+            }
+
             diseases.emplace(diseaseName, Disease(diseaseName, linePart));
         }
 
     } else {
-        // TODO Throw File Not Good exception
+        // TODO Exit Program
+        throw ReadException();
     }
 
     return diseases;
@@ -52,11 +62,15 @@ const pair<
         unordered_multimap<string, Disease>::iterator
 > DiseaseDAO::findByName(const string basic_string) {
 
-    findAll();
+    try {
+        findAll();
+    } catch (ReadException &exception) {
+        throw exception; // For upper levels
+    }
 
     auto range = diseases.equal_range(basic_string);
     if (range.first == range.second) {
-        // TODO Throw Disease Not Found excpetion
+        throw DiseaseNotFoundException();
     }
     return range;
 }

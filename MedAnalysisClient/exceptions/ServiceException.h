@@ -7,8 +7,8 @@ class ServiceException :
 		public std::exception {
 
  public:
-  ServiceException();
-  virtual ~ServiceException();
+  ServiceException() {}
+  virtual ~ServiceException() {}
 };
 
 #endif // MEDANALYSIS_CLIENT_SERVICE_EXCEPTION_H

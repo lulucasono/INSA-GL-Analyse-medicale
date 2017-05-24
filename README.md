@@ -40,7 +40,7 @@ cd _cmake_vs_build/
 cmake .. -G "Visual Studio 14 Win64"
 ```
 
-Après ça des fichiers de solutions Visual Studio devraient être créés
+Après ça, des fichiers de solutions Visual Studio devraient être créés
 
 #### CLion
 

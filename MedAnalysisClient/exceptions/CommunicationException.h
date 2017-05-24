@@ -7,8 +7,8 @@ class CommunicationException :
     public std::exception {
 
  public:
-  CommunicationException();
-  virtual ~CommunicationException();
+  CommunicationException() {}
+  virtual ~CommunicationException() {}
 };
 
 #endif // MEDANALYSIS_CLIENT_COMMUNICATION_EXCEPTION_H

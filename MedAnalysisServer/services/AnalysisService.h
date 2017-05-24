@@ -25,7 +25,7 @@ public:
 
     vector<Disease> evaluateAll(Genome &g);
 
-    unordered_multimap<string, Disease> getDisease();
+    unordered_multimap<string, Disease> getDiseases();
 
     const pair<
             unordered_multimap<string, Disease>::iterator,

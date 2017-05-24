@@ -1,9 +1,6 @@
 #include "ServerDAO.h"
 
-ServerDAO::ServerDAO() {
-}
-
-ServerDAO::ServerDAO(const char *dbName) {
+ServerDAO::ServerDAO(string dbName) {
 //  sqlite3_open(dbName, &db);
 }
 
@@ -11,7 +8,7 @@ ServerDAO::~ServerDAO() {
 
 }
 
-std::list<Server> ServerDAO::findAll() {
+std::vector<Server> ServerDAO::findAll() {
     /* std::string sqlSelectStr = "SELECT * FROM Server;";
      const char *sqlSelect = sqlSelectStr.c_str();
      std::list<Server> servers;
@@ -37,7 +34,7 @@ std::list<Server> ServerDAO::findAll() {
      }
 
      return servers;*/
-    return std::list<Server>();
+    return std::vector<Server>();
 }
 
 Server ServerDAO::findByName(std::string nameServer) {

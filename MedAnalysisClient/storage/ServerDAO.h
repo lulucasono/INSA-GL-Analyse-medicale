@@ -1,22 +1,26 @@
 #ifndef MEDANALYSIS_CLIENT_SERVERDAO_H
 #define MEDANALYSIS_CLIENT_SERVERDAO_H
 
-#include <list>
+#include <vector>
 #include <string>
 #include <iostream>
-#include <sqlite3.h>
 #include "../models/Server.h"
 
-class ServerDAO {
- public:
-  ServerDAO();
-  ServerDAO(const char *dbName = "Server.db"); // TODO MOVE DEFAULT NAME
-  ~ServerDAO();
-  std::list<Server> findAll();
-  Server findByName(std::string nameServer);
+using std::string;
+using std::vector;
 
- private:
-  sqlite3 *db;
+class ServerDAO {
+public:
+
+    ServerDAO(string dbName = "Server.db"); // TODO MOVE DEFAULT NAME
+
+    ~ServerDAO();
+
+    vector<Server> findAll();
+
+    Server findByName(string nameServer);
+
+private:
 };
 
 #endif //MEDANALYSIS_CLIENT_SERVERDAO_H

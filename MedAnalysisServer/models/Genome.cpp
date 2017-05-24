@@ -5,7 +5,7 @@ Genome::Genome() {
 }
 
 Genome::Genome(std::vector<std::string> &genes) {
-    geneticCode=genes;
+    geneticCode = genes;
 }
 
 Genome::~Genome() {

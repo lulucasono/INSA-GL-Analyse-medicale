@@ -21,6 +21,8 @@ public:
 
     AnalysisService();
 
+    AnalysisService(string filePath);
+
     vector<Disease> evaluateAll(Genome &g);
 
     unordered_multimap<string, Disease> getDisease();

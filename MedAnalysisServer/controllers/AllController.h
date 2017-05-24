@@ -13,7 +13,7 @@ using std::vector;
 class AllController {
 public:
 
-    string doCompleteEvaluation(string req);
+    vector<string> doCompleteEvaluation(vector<string> req);
 
 };
 

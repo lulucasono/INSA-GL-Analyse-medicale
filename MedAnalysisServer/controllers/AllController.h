@@ -15,7 +15,12 @@ using std::vector;
 class AllController {
 public:
 
+    AllController(string &filePath);
+
     vector<string> doCompleteEvaluation(vector<string> req);
+
+private:
+    AnalysisService service;
 
 };
 

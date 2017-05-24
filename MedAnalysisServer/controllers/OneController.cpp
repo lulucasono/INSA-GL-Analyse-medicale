@@ -30,8 +30,10 @@ vector<string> OneController::doOneEvaluation(vector<string> req) {
     response.push_back("DISEASE "+diseaseName);
     if(risk){
         response.push_back("1");
+        response.push_back("");
         return response;
     }
     response.push_back("0");
+    response.push_back("");
     return response;
 }

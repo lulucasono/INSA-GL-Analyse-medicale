@@ -22,10 +22,6 @@ set(HDR_CLIENT ${HDR_DIR} CACHE INTERNAL "")
 add_library(${TARGET_NAME} ${SOURCE_FILES})
 target_include_directories(${TARGET_NAME} PUBLIC ${HDR_SQLITE})
 
-# Target Library
-target_link_libraries(${TARGET_NAME} sqlite3)
-
-
 
 #-------------------------------------------#
 #------------ CLIENT EXECUTABLE ------------#

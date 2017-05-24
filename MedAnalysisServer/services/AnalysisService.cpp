@@ -1,6 +1,6 @@
 #include "AnalysisService.h"
 
-vector<Disease> AnalysisService::evaluateAll(Genome g) {
+vector<Disease> AnalysisService::evaluateAll(Genome &g) {
     auto diseases = diseaseDAO.findAll();
     vector<Disease> checkDiseases;
 

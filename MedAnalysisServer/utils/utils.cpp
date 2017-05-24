@@ -30,5 +30,6 @@ std::vector<std::string> getError(std::string errorMsg) {
 
     res.push_back("MA v1.0");
     res.push_back("ERROR " + errorMsg);
+    res.push_back("");
     return res;
 }

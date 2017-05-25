@@ -1,0 +1,5 @@
+MA v1.0
+Asthma;TCGC;AGGCT
+Huntington's disease;AACGA;GCGAC
+Marfan Syndrome;TAATAG
+

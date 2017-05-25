@@ -1,8 +1,10 @@
 #include "OneController.h"
-#include "../services/AnalysisService.h"
 
+OneController::OneController(const string filePath)  {
+    service = AnalysisService(filePath);
+}
 
-vector<string> OneController::doOneEvaluation(vector<string> req,const string filePath) {
+vector<string> OneController::doOneEvaluation(vector<string> req) {
     // TODO Parsing pour evaluation d'une maladie (récupérer la maladie, etc...)
     string diseaseName = req[2];
     vector<string> genes = split(req[3], ';', false);
@@ -10,14 +12,13 @@ vector<string> OneController::doOneEvaluation(vector<string> req,const string fi
     if(!check_char_presence(genes,allowed)){
         return getError("Unauthorized character found in the genetic code, aborting analysis");
     }
-    AnalysisService services = AnalysisService(filePath);
-    auto disease = services.getDiseaseByName(diseaseName);
+    auto disease = service.getDiseaseByName(diseaseName);
     Genome genome = Genome(genes);
     bool risk = false;
     bool error = true;
     for (auto it = disease.first; it != disease.second; ++it) {
         error = false;
-        if (services.evaluateOne(genome, it->second)) {
+        if (service.evaluateOne(genome, it->second)) {
             risk = true;
         }
     }

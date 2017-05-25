@@ -14,7 +14,7 @@ TEST_CASE("One Controller","[controller][server]"){
     input.push_back("Maladie");
     input.push_back("AGGT;CGT");
     input.push_back("");
-    str=OneController().doOneEvaluation(input,"../../../res/diseases.txt");
+    str=OneController("../../../res/diseases.txt").doOneEvaluation(input);
     REQUIRE(str[0]=="MA v1.0");
     REQUIRE(str[1]=="DISEASE Maladie");
     //REQUIRE(str[2]=="");

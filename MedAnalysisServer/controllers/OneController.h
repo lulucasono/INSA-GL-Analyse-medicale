@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include "../utils/utils.h"
+#include "../services/AnalysisService.h"
 
 using std::istream;
 using std::string;
@@ -13,8 +14,13 @@ using std::vector;
 class OneController {
 public:
 
-    vector<string> doOneEvaluation(vector<string> req,const string filePath);
+    OneController(const string filePath);
 
+
+    vector<string> doOneEvaluation(vector<string> req);
+
+private:
+    AnalysisService service;
 };
 
 #endif //MEDANALYSIS_SERVER_ONECONTROLLER_H

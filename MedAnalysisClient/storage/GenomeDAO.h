@@ -5,6 +5,16 @@
 #ifndef MEDANALYSIS_GENOMEDAO_H
 #define MEDANALYSIS_GENOMEDAO_H
 
+#include <string>
+#include <vector>
+#include <fstream>
+#include "../exceptions/ReadException.h"
+#include "../models/Genome.h"
+#include "../utils/utils.h"
+
+using std::string;
+using std::vector;
+using std::ifstream;
 
 class GenomeDAO {
 public:
@@ -17,6 +27,7 @@ public:
 
 private:
     Genome genome;
+    string name;
 };
 
 

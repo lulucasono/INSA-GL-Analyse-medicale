@@ -12,7 +12,7 @@ GenomeDAO::GenomeDAO(string fileName) {
 
 GenomeDAO::~GenomeDAO() {}
 
-const Genome GenomeDAO::readAnalsis() {
+const Genome GenomeDAO::readAnalysis() {
 
     if (!genome.geneticCode().empty()) {
         return genome;
@@ -35,7 +35,9 @@ const Genome GenomeDAO::readAnalsis() {
         getline(fin, line);
         while (!line.empty()) {
 
-            if (!check_char_presence(line, ALLOWED_CHAR)) {
+            vector<string> v;
+            v.push_back(line);
+            if (!check_char_presence(v, ALLOWED_CHAR)) {
                 throw ReadException();
             }
             genome.addWord(line);
